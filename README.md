@@ -1,5 +1,55 @@
 # ConceptX
-Analyzing Latent Concept in Pre-trained Transformer Models
+Analyzing Latent Concept in Code-trained Transformer Models
+
+### 1. Clone and Set Up ConceptX (for clustering)
+module purge
+module load micromamba
+module load git
+
+First, clone the **ConceptX** repository and set up the environment for extracting activations.
+
+```bash
+cd /work/LAS/jannesar-lab/arushi/LatentConceptAnalysis
+cd <your project dir>
+
+# Clone the ConceptX repository
+git clone https://github.com/arushisharma17/ConceptX.git
+cd ConceptX
+
+# Initialize micromamba
+eval "$(micromamba shell hook --shell=bash)"
+
+# Create and activate the 'clustering' environment from the NeuroX repository
+micromamba env create --name=clustering
+
+# Activate the environment
+micromamba activate clustering
+
+# Check if environment activation was successful and proceed with package installation
+if micromamba activate clustering; then
+    echo "Environment 'env_activations' activated successfully."
+
+    # Install Hugging Face transformers package
+    python -m pip install git+https://github.com/huggingface/transformers
+
+    # Install NeuroX in editable mode
+    pip install -e .
+
+    # List installed packages to verify installation
+    echo "Listing installed packages in 'clustering':"
+    micromamba list
+
+    # Deactivate environment after setup
+    micromamba deactivate
+else
+    echo "Failed to activate environment 'clustering'."
+    exit 1
+fi
+
+cd ..
+```
+
+
 
 The code has been split into three parts. 1) get concept clusters, 2) generate auto-labels data, 3) calculate the alignment between auto-labels and concepts.
 
