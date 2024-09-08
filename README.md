@@ -29,6 +29,7 @@ ConceptX is designed to facilitate sophisticated clustering methods and streamli
 To install ConceptX, you can use Poetry or pip.
 
 ### Using Poetry
+Poetry is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you. Poetry offers a lockfile to ensure repeatable installs, and can build your project for distribution.
 
 1. Install Poetry if you haven’t already:
    ```bash
