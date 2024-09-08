@@ -112,5 +112,5 @@ We welcome contributions! If you have suggestions or improvements, please create
 For questions or feedback, please contact:
 
 - **Author:** Arushi Sharma
-- **Email:** your.email@example.com
+- **Email:** arushi17@iastate.edu
 - **GitHub:** [arushisharma17](https://github.com/arushisharma17)
